@@ -10,3 +10,4 @@ AC情况
 |5-quicksortlick.cpp|超时|自己实现的快排,不完整排序|
 |5-stdsort.cpp|AC|std::sort()|
 |5-stdheap.cpp|AC|std::make_heap(),std::pop_heap()|
+|6.cpp|AC|合并排序好的数组|
