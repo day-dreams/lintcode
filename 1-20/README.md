@@ -11,3 +11,6 @@ AC情况
 |5-stdsort.cpp|AC|std::sort()|
 |5-stdheap.cpp|AC|std::make_heap(),std::pop_heap()|
 |6.cpp|AC|合并排序好的数组|
+|7.py|AC|403ms|
+|8.cpp|AC||
+|9.cpp|AC||
