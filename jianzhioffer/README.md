@@ -1,4 +1,4 @@
-lintcode 剑值offer系列
+lintcode 剑指offer系列
 ===
 
 
