@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 /**
  * Definition of TreeNode:
@@ -14,49 +14,54 @@ using namespace std;
  *     }
  * }
  */
-class TreeNode
-{
+class TreeNode {
   public:
-	int val;
-	TreeNode *left, *right;
-	TreeNode(int val)
-	{
-		this->val = val;
-		this->left = this->right = nullptr;
-	}
+    int val;
+    TreeNode *left, *right;
+    TreeNode(int val) {
+        this->val = val;
+        this->left = this->right = nullptr;
+    }
 };
 
-class Solution
-{
-	/**
+class Solution {
+    /**
      *@param preorder : A list of integers that preorder traversal of a tree
      *@param inorder : A list of integers that inorder traversal of a tree
      *@return : Root of a tree
      */
   public:
-	TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
-	{
-		// write your code here
+    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+        // write your code here
 
-		if (preorder.size() == 0)
-		{
-			return nullptr;
-		}
+        if (preorder.size() == 0) {
+            return nullptr;
+        }
 
-		TreeNode *rv = new TreeNode(preorder[0]);
+        TreeNode *rv = nullptr;
 
-		auto mid = find(inorder.begin(), inorder.end(), preorder[0]);
+        return rv;
+    }
 
-		auto l_inorder = vector<int>(inorder.begin(), mid);
-		auto r_inorder = vector<int>(mid + 1, inorder.end());
+    TreeNode *_buildTree(int *prebegin, int *preend, int *inbegin, int *inend) {
+        TreeNode *rv = nullptr;
 
-		
-		// auto right = buildTree();
-		// auto left = buildTree(lv);
+        if (prebegin == preend) {
+            return nullptr;
+        } else if (prebegin + 1 == preend) {
+            rv = new TreeNode(*prebegin);
+        }else{
+            int root=*prebegin;
+            int *root_in_inorder=find(inbegin,inend,root);            
+            
 
-		rv->left = left;
-		rv->right = right;
 
-		return rv;
-	}
+            rv=new TreeNode(root);
+
+
+
+
+        }
+        return rv;
+    }
 };
